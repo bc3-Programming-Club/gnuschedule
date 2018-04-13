@@ -1,18 +1,40 @@
 <?php
 
-require 'table.php';
+require '../model.php';
 
-class TestTable extends Table {
+Model::$connection = new MemoryStorage();
+
+class TestTable extends Model {
     public $data = NULL;
 }
 
+class TestTable2 extends Model {
+    public $data = NULL;
+}
 
 (function () { /* test_table_create_row */
     TestTable::drop();
 
     $row = new TestTable(['data' => 'a']);
-    assert( is_a($row, 'Table') );
+    assert( is_a($row, 'Model') );
     assert( $row->data == 'a' );
+    /**/
+})();
+
+(function () { /* test_table_storage */
+
+    $table = new Model();
+    $ttable = new TestTable(['data' => 'lanthanum']);
+    $ttable2 = new TestTable2(['data' => 'promethium']);
+
+    //print var_dump($ttable2::all());
+    
+    //print "\n";
+    //print var_dump([]);
+
+    assert( count($table::all()) === 1 );
+    assert( count($ttable::all()) === 1 );
+    assert( count($ttable2::all()) === 1 );
     /**/
 })();
 
