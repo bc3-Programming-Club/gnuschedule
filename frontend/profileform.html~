@@ -1,0 +1,38 @@
+<!DOCTYPE html >
+<html lang="en" >
+
+<head>
+  <title>Make Your Profile</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="profileresults.css" rel="stylesheet">
+  <!--{if lt IE 9}>
+  <script src="http://html5shim.googlecode.com/svn/truck/html5.js">
+  </script>
+  <!{endif}-->
+</head>
+
+<body>
+  <header>
+  <h1 style="text-align: center;"> Make Your Profile</h1>
+  </header>
+  
+  <h3 style="text-align: center;" id="Contact"> Schadule an Appointment.</h3>
+  <p style="text-align: center;">"Please enter your information below to request an appointment.""Required fields are marked with an asterisk (*)."</p>
+  
+  <center>
+    <form action="http://webdevbasics.net/scripts/profileresults8.php" method="post">
+      <label for="myFName">* First Name:</label>
+      <input type="text" name="myFName" required><br>
+      <label for="myLName">* Last Name:</label>
+      <input type="text" name="myLName" required><br>
+      <label for="myEmail">* School E-mail:</label>
+      <input type="email" name="myEmail" required><br>
+      <input type="submit" value="Submit" id="mySubmit" required>
+     </form>
+   </center>
+</main>
+&nbsp;
+</body>
+</html>
+
