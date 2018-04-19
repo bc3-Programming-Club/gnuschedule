@@ -1,3 +1,11 @@
+# MS Visual Studio Code
 .vscode
+
+# utility for viewing MS AccessDB files
 access2csv.jar
+
+# Sails.js demo
 demo
+
+# Gedit backups
+**/*~
