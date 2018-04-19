@@ -3,6 +3,7 @@
 interface Storage {
     public function create_table($name);
     public function drop_table($name); 
+    public function has_table($name);
     public function get_table($name);
     public function get_tables();
 
@@ -17,6 +18,10 @@ class MemoryStorage implements Storage {
         $this->tables[$name] = [];
     }
 
+    function drop_table($name) {
+        unset($this->tables[$name]);
+    }
+    
     function has_table($name) {
         return in_array($name, array_keys($this->tables));
     }
@@ -27,10 +32,6 @@ class MemoryStorage implements Storage {
         }
 
         return $this->tables[$name];
-    }
-
-    function drop_table($name) {
-        unset($this->tables[$name]);
     }
     
     function get_tables() {
@@ -51,7 +52,12 @@ class Model {
     static $connection;
 
     function __construct(array $params=[]) {
-        self::all(); // initialize the table
+        
+        // initialize the table
+        if (self::$connection->has_table(self::tablename()) === FALSE) {
+            self::$connection->create_table(self::tablename());
+        }
+
         self::$connection->insert(self::tablename(), $this);
 
         foreach ($params as $prop => $value) {
