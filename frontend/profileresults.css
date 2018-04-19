@@ -1,0 +1,207 @@
+body { 
+    background-color: #FFDEAD; 
+    color: #FFFFFF;
+    font-family: verdana sans-serif; 
+	background-image: url("raven.png"); /* edit this line to change background image*/
+	background-size: cover;
+}
+header {
+        background-color: #003583;
+        height: 170px;
+		text-indent: o;
+		background-image: url("desk.jpg");
+	    background-repeat: no-repeat;
+		background-size: 100%;
+		font-family: papyrus, fantasy 
+}
+h1 { 
+    color: #000000;
+    padding-top: 45px;
+	padding-left: 220px;
+	font-size: 3em;
+}
+nav { 
+     font-weight: bold;
+     text-align: center;
+	 font-size: 1.5em;
+	 padding-top: 10px; 	 
+}
+nav a {
+	   text-decoration: none;
+	   color: #FFFFFF;
+}
+nav a:link {
+	        color: #FFFFFF;
+}
+nav a:visited {
+	           color: #FFDEAD;
+}
+nav a:hover {
+	         color: #B33C00;
+} 
+main {
+	  padding-left: 2em;
+      padding-right: 2em;
+	  padding-bottom: 2em;
+	  display: block;
+}
+footer { 
+        background-color: #003583;
+		color: #000000;
+		background-image: url("desk 2.jpg");
+	    background-repeat: no-repeat;
+		background-size: 100%;
+        padding-bottom: 10px;
+        font-style: italic; 
+        text-align: center;
+		height: 200px;
+		font-family: papyrus, fantasy;
+		margin-bottom: 30px;
+}
+img {
+	 padding-left: 10px;
+	 padding-right: 10px;
+	 margin-bottom: 20px;
+}
+h3 {
+	font-weight: bold;
+    font-style: italic;
+	background-color: #FFDEAD;
+	color: #000000;
+	text-align: center;
+	font-size: 1.2em;
+	padding-left: 10px;
+	padding-bottom: 5px;
+	font-family: papyrus, fantasy;
+	margin-top: 30px;
+}
+details {
+         padding-left: 30%;
+         padding-right: 30%;
+}	
+table {
+	   border-color: #FFFFCC;
+	   border-spacing: 0;
+       border-collapse: collapse;
+       width: 90%;
+}
+th, td {
+        color: #000000;
+        text-align: center;
+        padding: 10px;
+}
+tr:nth-child(odd){background-color: #FFDEAD} /* this line lets you edit the banded rows and row color in a table */
+form {
+      padding: 2em;
+}
+label {
+	   display: block;
+	   text-align: center;
+	   width: 8em;
+	   padding-right: 1em;
+}
+input{
+	  display: block; 
+	  margin-bottom: 1em;
+}
+textarea {
+	      display: block; 
+	      margin-bottom: 1em;
+}
+.mySubmit {
+	       margin-left: 9.5em;
+}
+@media only screen and (maxwidth: 1024px) { /* media friendly style block for tablet views */
+    body {
+          margin: 0;
+          background-image: none;
+    }
+	#wrapper {
+		      width: auto;
+			  min-width: 0;
+			  margin: 0;
+			  padding: 0;
+			  box-shadow: none;
+	}
+	header {
+		    border-bottom: 5px;
+			border-style: solid;
+			background-color: #F3E2A9;
+	}
+	h1 {
+		margin-top: 0;
+		margin-bottom: 1em;
+		padding-top: 1em;
+		padding-bottom: 1em;
+		font-size:2.5em	
+    }
+    nav {
+		 float: none;
+		 width: auto;
+		 padding-top: 0;
+		 margin: 10px;
+		 font-size: 1.3em;
+	}
+    li {
+		    display: inline-block;
+	}
+	nav a {
+           padding: 1em;
+		   width: 8em;
+		   font-weight: bold;
+		   border-style: none;
+	}
+	ul {
+		    padding: 0;
+			margin: 0;
+	}
+	main {
+		  padding: 0;
+		  margin: 0;
+		  font-size: 90%;
+	}
+}
+@media only screen and (maxwidth: 768px) {
+	header {
+		    background-image: url("notebook.jpg");
+			height: 128px;
+    }
+	h1 {
+		font-size: 2em;
+        text-align: center;	
+        padding-left: 0;		
+    }
+    nav {
+		 margin: 0;
+	}
+    li {
+		    display: block;
+	}
+	nav a {
+           display: block;
+		   padding: 0.2em;
+		   width: auto;
+		   border-bottom: 1px;
+           border-color: #F3E2A9;		   
+	}
+	h2 {
+		padding-top: 0.5em;
+		padding-right: 0;
+		padding-bottom: 0;
+		padding-left: 0.5em;
+		margin-right: 0.5em;
+    }
+	details {
+		     padding-left: 0;
+			 padding-right: 0;
+	}
+	main {
+		  padding-top: 1px;
+	}
+	#mobile {
+	         display: inline;
+    }
+    #desktop {
+              display: none;
+    }
+}
